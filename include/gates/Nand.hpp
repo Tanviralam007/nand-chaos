@@ -17,6 +17,7 @@ namespace nandchaos
                  1 | 0 |   1
                  1 | 1 |   0
                 */
+               
                 outputs[0] = !(inputs[0] && inputs[1]);
             }
     };

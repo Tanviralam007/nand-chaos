@@ -52,6 +52,7 @@ namespace nandchaos
                 inputs = values;
             }
 
+            // 
             size_t getInputCount() const
             {
                 return inputs.size();
