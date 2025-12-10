@@ -1,6 +1,7 @@
 # nand-chaos
 a simulation game for my baby boy
 
+```
 NAND-CHAOS/
 ├── include/
 │   ├── core/
@@ -50,7 +51,6 @@ NAND-CHAOS/
 │       └── InputOutput.hpp
 │
 ├── src/                           
-│   ├── core/
 │   ├── gates/
 │   ├── arithmetic/
 │   ├── switching/
