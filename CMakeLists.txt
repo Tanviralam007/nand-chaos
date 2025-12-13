@@ -17,13 +17,18 @@ target_include_directories(nand_gates INTERFACE
 )
 target_link_libraries(nand_gates INTERFACE nand_core)
 
+add_library(nand_gates_impl
+    src/gates/Invert.cpp
+)
+target_link_libraries(nand_gates_impl PUBLIC nand_gates)
+
 add_executable(test_gates tests/test_gates.cpp)
-target_link_libraries(test_gates PRIVATE nand_gates)
+target_link_libraries(test_gates PRIVATE nand_gates_impl)
 
 add_executable(myapp 
     src/main.cpp
 )
-target_link_libraries(myapp PRIVATE nand_gates)
+target_link_libraries(myapp PRIVATE nand_gates_impl)
 
 enable_testing()
 add_test(NAME GatesTest COMMAND test_gates)
