@@ -2,7 +2,9 @@
 
 namespace nandchaos
 {
-    And::And() : Component(2, 1, "And"), nand() {}
+    And::And() : Component(2, 1, "And") {
+        
+    }
 
     void And::evaluate()
     {

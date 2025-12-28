@@ -1,3 +1,4 @@
+#pragma once
 #include "../core/Component.hpp"
 #include "Nand.hpp"
 #include "Invert.hpp"
