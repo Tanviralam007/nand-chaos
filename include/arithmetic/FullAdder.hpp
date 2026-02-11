@@ -18,5 +18,6 @@ namespace nandchaos
             // helper methods
             bool getSum() const{return outputs[0];}
             bool getCarry() const{return outputs[1];}
+            
     };
 }
