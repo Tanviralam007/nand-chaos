@@ -28,9 +28,10 @@ add_library(nand_gates_impl
 )
 target_link_libraries(nand_gates_impl PUBLIC nand_gates)
 
-# Arithmetic library
+# Arithmetic implementation library
 add_library(nand_arithmetic
     src/arithmetic/HalfAdder.cpp
+    src/arithmetic/FullAdder.cpp
 )
 target_link_libraries(nand_arithmetic PUBLIC nand_gates_impl)
 
@@ -54,11 +55,7 @@ add_test(NAME ArithmeticTest COMMAND test_arithmetic)
 
 # Custom target to run all tests
 add_custom_target(run_all
-    COMMAND ${CMAKE_COMMAND} -E echo "=========================================="
-    COMMAND ${CMAKE_COMMAND} -E echo "          Running Gate Tests..."
-    COMMAND ${CMAKE_COMMAND} -E echo "=========================================="
     COMMAND test_gates
-    COMMAND ${CMAKE_COMMAND} -E echo ""
     COMMAND ${CMAKE_COMMAND} -E echo "=========================================="
     COMMAND ${CMAKE_COMMAND} -E echo "          Running Arithmetic Tests..."
     COMMAND ${CMAKE_COMMAND} -E echo "=========================================="
