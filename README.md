@@ -69,5 +69,5 @@ NAND-CHAOS/
 Test:
 ```
 cmake ..
-cmake --build --target run_all
+cmake --build . --target run_all
 ```
