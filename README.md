@@ -63,3 +63,11 @@ NAND-CHAOS/
 │   └── main.cpp                   
 ├── docs/                          # Documentation              
 └── CMakeLists.txt
+
+```
+
+Test:
+```
+cmake ..
+cmake --build --target run_all
+```
