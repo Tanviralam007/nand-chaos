@@ -32,6 +32,7 @@ target_link_libraries(nand_gates_impl PUBLIC nand_gates)
 add_library(nand_arithmetic
     src/arithmetic/HalfAdder.cpp
     src/arithmetic/FullAdder.cpp
+    src/arithmetic/MultiBitAdder.cpp
 )
 target_link_libraries(nand_arithmetic PUBLIC nand_gates_impl)
 
